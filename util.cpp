@@ -85,3 +85,23 @@ void print_array(const std::vector<std::vector<int>> &output) {
         
     }
 }
+
+
+
+/*
+ * This function generates n number of random numbers in range from 0 - 10000
+ *
+ * Params:
+ *   num - the number of random numbers to be generated
+ */
+std::vector<int> random_numbers(int num) {
+    //allocates enough space for all
+    std::vector<int> random_nums(num);
+
+    for(int i = 0; i < num; i++) {
+        random_nums.push_back(rand() % 10001);
+        std::cout << random_nums[i];
+    }
+
+    return random_nums;
+}
