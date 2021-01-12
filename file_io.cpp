@@ -1,7 +1,7 @@
 #include "file_io.h"
 
 
-std::vector<std::vector<int>> read_file() {
+std::vector<std::vector<int>> read_file(std::vector<std::vector<int>> &output) {
     //open file
     std::ifstream file;
     file.open("data.txt");
@@ -9,7 +9,6 @@ std::vector<std::vector<int>> read_file() {
     //init variables
     std::string line;
     std::vector<std::string> lines;
-    std::vector<std::vector<int>> output;
 
     //tokenize file into lines
     if(file.is_open()) {
@@ -23,14 +22,7 @@ std::vector<std::vector<int>> read_file() {
     output = parse_ints(lines);
     
     /* for checking
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < output[i].size(); j++) {
-            std::cout << output[i][j] << " ";
-        }
-
-        std::cout << "\n";
-        
-    }
+    read_array(output);
     */
     
 
@@ -56,9 +48,9 @@ std::vector<std::vector<int>> parse_ints(std::vector<std::string> lines) {
     std::string temp = ""; //for storing numbers before adding
     int num;
     
-    for(int i = 0; i < lines.size(); i++) { //for each line
+    for(long unsigned int i = 0; i < lines.size(); i++) { //for each line
         num = 0;
-        for(int j = 0; j < (lines[i].size() + 1); j++) {  //for each char in line
+        for(long unsigned int j = 0; j < (lines[i].size() + 1); j++) {  //for each char in line
 
             //if char is a number, add to temp
             if(lines[i][j] > 47 && lines[i][j] < 58) {
@@ -80,4 +72,16 @@ std::vector<std::vector<int>> parse_ints(std::vector<std::string> lines) {
     }
     
     return output;
+}
+
+
+void print_array(const std::vector<std::vector<int>> &output) {
+    for(long unsigned int i = 0; i < output.size(); i++){
+        for(long unsigned int j = 0; j < output[i].size(); j++) {
+            std::cout << output[i][j] << " ";
+        }
+
+        std::cout << "\n";
+        
+    }
 }
