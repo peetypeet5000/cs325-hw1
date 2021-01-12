@@ -18,7 +18,7 @@ file_io.o: file_io.cpp file_io.h
 
 
 clean:
-	rm *.o $(exe_file)
+	rm *.o mergesort insertsort
 
 tar:
-	tar -cvf $(exe_file).tar *.cpp *.h bft.txt Makefile
+	tar -cvf $(exe_file).tar *.cpp *.h Makefile
