@@ -7,7 +7,7 @@
 int main() {
     srand(time(NULL));
 
-    for(int n = 100000; n < 1000001; n = n + 100000) {
+    for(int n = 10000; n < 100001; n = n + 10000) {
         std::vector<int> data = random_numbers(n);
 
         long int start_time = get_time_mil();
