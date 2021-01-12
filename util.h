@@ -1,5 +1,5 @@
-#ifndef FILEIO
-#define FILEIO
+#ifndef UTIL
+#define UTIL
 
 #include <iostream>
 #include <fstream>

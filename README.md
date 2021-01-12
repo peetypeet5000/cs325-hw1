@@ -1,4 +1,12 @@
-# cs325 Homework 1
+# CS325 - Analysis of Algorithms Homework 1
+## How to run:
+A makefile is included. Run `make` to compile the program (using g++). Run the programs with the following executable names:
+* ./mergesort - Runs merge sort on the data from data.txt
+* ./insertsort - Runs insert sort on the data from data.txt
+
+
+
+
 ## Program Requirements:
 ### Part 1:
 Implement merge sort and insertion sort to sort anarray/vector of integers.  You may implement the algorithms in C, C++ or Python, name the programs “mergesort” and “insertsort”. Your programs should be able to read inputs from a file called “data.txt” where the first value of each line is the number of integers that need to be sorted, followed by the integers. Example values for data.txt:  
