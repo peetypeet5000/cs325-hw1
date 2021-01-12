@@ -99,9 +99,15 @@ std::vector<int> random_numbers(int num) {
     std::vector<int> random_nums(num);
 
     for(int i = 0; i < num; i++) {
-        random_nums.push_back(rand() % 10001);
-        std::cout << random_nums[i];
+        random_nums[i] = (rand() % 10001);
     }
 
     return random_nums;
+}
+
+
+long int get_time_mil() {
+    struct timeval tp;
+    gettimeofday(&tp, NULL);
+    return tp.tv_sec * 1000 + tp.tv_usec / 1000;
 }

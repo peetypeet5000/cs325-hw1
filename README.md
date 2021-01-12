@@ -3,11 +3,13 @@
 A makefile is included. Run `make` to compile the program (using g++). Run the programs with the following executable names:
 * ./mergesort - Runs merge sort on the data from data.txt
 * ./insertsort - Runs insert sort on the data from data.txt
+* ./insertTime - Runs a test to see how fast insert sort is for large n
+* ./mergeTime - Runs a test to see how fast merge sort is for large n
 
 
 
 
-## Program Requirements:
+## Program Requirements (for referance):
 ### Part 1:
 Implement merge sort and insertion sort to sort anarray/vector of integers.  You may implement the algorithms in C, C++ or Python, name the programs “mergesort” and “insertsort”. Your programs should be able to read inputs from a file called “data.txt” where the first value of each line is the number of integers that need to be sorted, followed by the integers. Example values for data.txt:  
 4 19 2 5 11  

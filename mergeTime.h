@@ -1,11 +1,11 @@
-#ifndef INSERT_TIME
-#define INSERT_TIME
+#ifndef MERGE_TIME
+#define MERGE_TIME
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
 #include <time.h>
 #include "util.h"
-#include "insertsort.h"
+#include "mergesort.h"
 
 
 #endif
