@@ -32,6 +32,7 @@ std::vector<std::vector<int>> read_file() {
         
     }
     */
+    
 
     
     //close and return
@@ -53,8 +54,10 @@ std::vector<std::vector<int>> parse_ints(std::vector<std::string> lines) {
     std::vector<std::vector<int>> output(lines.size());
 
     std::string temp = ""; //for storing numbers before adding
+    int num;
     
     for(int i = 0; i < lines.size(); i++) { //for each line
+        num = 0;
         for(int j = 0; j < (lines[i].size() + 1); j++) {  //for each char in line
 
             //if char is a number, add to temp
@@ -64,9 +67,12 @@ std::vector<std::vector<int>> parse_ints(std::vector<std::string> lines) {
             } 
             //else, it must be a space, so insert temp number into int array
             else if(temp != "") {
-                //std::cout << "\nadding " << std::stoi(temp) << " to vector";
-                output[i].push_back(std::stoi(temp));
+                if(num != 0) {  //ignores first value, as it is not actually in the data
+                    //std::cout << "\nadding " << std::stoi(temp) << " to vector";
+                    output[i].push_back(std::stoi(temp));
+                }
                 temp.clear();
+                num++;
 
             }
 
